@@ -106,17 +106,25 @@ namespace lab6
 
             int chimneyWidth = 25;
             int chimneyHeight = 35;
-            int chimneyXStart = x_start + 25;
-            int chimneyYStart = y_start - 40;
+            int chimneyXStart = x_start + 20;
+            int chimneyYStart = y_start - 60;
 
 
-            g.FillPolygon(new SolidBrush(Color.FromArgb(255, 0, 0, 0)), new Point[]
+            g.FillPolygon(new SolidBrush(Color.FromArgb(255, 110, 107, 109)), new Point[]
             {
-                new Point(chimneyXStart,chimneyYStart + chimneyHeight),
-                new Point(chimneyXStart + chimneyWidth,chimneyYStart),
-                new Point(chimneyXStart + chimneyWidth,chimneyYStart - chimneyHeight),
-                new Point(chimneyXStart,chimneyYStart)
+                new Point(chimneyXStart,chimneyYStart),
+                new Point(chimneyXStart, chimneyYStart + chimneyHeight+5),
+                new Point(chimneyXStart+chimneyWidth,chimneyYStart + chimneyHeight/2 - 1),
+                new Point(chimneyXStart+chimneyWidth,chimneyYStart)
 
+            });
+
+            g.DrawPolygon(BLACK_PEN_BOLD, new Point[]
+            {
+                new Point(chimneyXStart,chimneyYStart),
+                new Point(chimneyXStart, chimneyYStart + chimneyHeight+5),
+                new Point(chimneyXStart+chimneyWidth,chimneyYStart + chimneyHeight/2),
+                new Point(chimneyXStart+chimneyWidth,chimneyYStart)
             });
         }
 
