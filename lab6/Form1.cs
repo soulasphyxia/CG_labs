@@ -260,15 +260,8 @@ namespace lab6
 
         private void DrawTree(Graphics g, int x_start, int y_start)
         {
-
             g.FillRectangle(BROWN_BRUSH, x_start, y_start, 40, 200);
-
             g.FillEllipse(GREEN_BRUSH, x_start-55, y_start-30,150,120);
-
-
-            
-
-
         }
     }
 }
