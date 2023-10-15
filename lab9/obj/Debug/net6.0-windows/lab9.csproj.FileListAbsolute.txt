@@ -1,0 +1,16 @@
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\bin\Debug\net6.0-windows\lab9.exe
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\bin\Debug\net6.0-windows\lab9.deps.json
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\bin\Debug\net6.0-windows\lab9.runtimeconfig.json
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\bin\Debug\net6.0-windows\lab9.dll
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\bin\Debug\net6.0-windows\lab9.pdb
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.Form1.resources
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.csproj.GenerateResource.cache
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.AssemblyInfoInputs.cache
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.AssemblyInfo.cs
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.csproj.CoreCompileInputs.cache
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.dll
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\refint\lab9.dll
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.pdb
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\lab9.genruntimeconfig.cache
+C:\Users\masly\Desktop\лабы\3 курс\CG_labs\lab9\obj\Debug\net6.0-windows\ref\lab9.dll

@@ -14,11 +14,9 @@ namespace lab7
     {
         private int x1, y1, x2, y2;
         private double a, t, fi;
-        private Pen pen = new Pen(Color.DarkRed, 2);
-
-
-
-
+        private SolidBrush BLACK_BRUSH = new SolidBrush(Color.Black);
+      
+ 
 
         public Form1()
         {
@@ -28,42 +26,43 @@ namespace lab7
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g.DrawEllipse(pen, x2, y2, 20, 20);
-
+            g.FillEllipse(BLACK_BRUSH, x2, y2, 20, 20);
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            x1 = 300;
-            y1 = 200;
-            a = 10;
-            fi = -1;
-            t = Math.Tan(fi/3);
-            x2 = x1 - (int)(3 * a * (3 - t * t));
-            y2 = y1 + (int)(a * t * (3 - t * t));
-            Console.WriteLine(x2 + " " + y2);
+            x1 = ClientSize.Width / 2 +200;
+            y1 = ClientSize.Height / 2;
+            a = 25;
+            fi = -3.8;
+            t = Math.Tan(fi / 3);
+            x2 = x1 + (int)(a * (1 - 3 * t * t));
+            y2 = y1 - (int)(a * t * (3 - t * t));
+           
 
 
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            fi += 0.01;
-            t = Math.Tan(fi/3);
-            x2 = x1 - (int)(3 * a * (3 - t * t));
-            y2 = y1 + (int)(a * t * (3 - t * t));
-            Console.WriteLine(x2 + " " + y2);
+            fi += 0.03;
+            t = Math.Tan(fi / 3);
+            x2 = x1 + (int)(a * (1 - 3 * t * t));
+            y2 = y1 - (int)(a * t * (3 - t * t));
+            if(fi > 3.8)
+            {
+                fi = -3.8;
+            }
             Invalidate();
-            
-        }
 
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Interval = 5;
             timer1.Enabled = true;
         }
-        
 
     }
 }
