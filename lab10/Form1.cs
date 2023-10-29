@@ -1,20 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace lab10
-{
+{   
+
     public partial class Form1 : Form
     {
-
         private double[,] Sq;
         private double[,] T;
         private double[,] P;
         private double[,] Sq_copy;
         private List<List<double>> points;
+        private int offset = 15;
 
         Pen BLACK_REGULAR_PEN = new Pen(Brushes.Black, 1);
         Pen RED_REGULAR_PEN = new Pen(Brushes.Red);
 
 
-
-        private int offset = 15;
         public Form1()
         {
             InitializeComponent();
@@ -148,7 +157,6 @@ namespace lab10
 
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -211,7 +219,6 @@ namespace lab10
             Invalidate();
         }
 
-
         private void button4_Click(object sender, EventArgs e)
         {
             double rotateAngle = double.Parse(textBox1.Text);
@@ -238,40 +245,6 @@ namespace lab10
                 T = new double[4, 4] {
                 {Math.Cos(fi),Math.Sin(fi),0,0},
                 {-Math.Sin(fi),Math.Cos(fi),0,0},
-                {0,0,1,0},
-                {0,0,0,1} };
-            }
-            Transformation();
-            Projection_Transformation();
-            Invalidate();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            double rotateAngle = double.Parse(textBox1.Text);
-
-            double fi = Math.PI / 180 * rotateAngle;
-            if (radioButton1.Checked)
-            {
-                T = new double[4, 4] {
-                {1,0,0,0},
-                {0,Math.Cos(-fi),Math.Sin(-fi),0},
-                {0,-Math.Sin(-fi),Math.Cos(-fi),0},
-                {0,0,0,1} };
-            }
-            else if (radioButton2.Checked)
-            {
-                T = new double[4, 4] {
-                {Math.Cos(-fi),0,-Math.Sin(-fi),0},
-                {0,1,0,0},
-                {Math.Sin(-fi),0,Math.Cos(-fi),0},
-                {0,0,0,1} };
-            }
-            else if (radioButton3.Checked)
-            {
-                T = new double[4, 4] {
-                {Math.Cos(-fi),Math.Sin(-fi),0,0},
-                {-Math.Sin(-fi),Math.Cos(-fi),0,0},
                 {0,0,1,0},
                 {0,0,0,1} };
             }
@@ -307,6 +280,40 @@ namespace lab10
                 {0,0,1,0},
                 {0,0,0,1}
             };
+            Transformation();
+            Projection_Transformation();
+            Invalidate();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            double rotateAngle = double.Parse(textBox1.Text);
+
+            double fi = Math.PI / 180 * rotateAngle;
+            if (radioButton1.Checked)
+            {
+                T = new double[4, 4] {
+                {1,0,0,0},
+                {0,Math.Cos(-fi),Math.Sin(-fi),0},
+                {0,-Math.Sin(-fi),Math.Cos(-fi),0},
+                {0,0,0,1} };
+            }
+            else if (radioButton2.Checked)
+            {
+                T = new double[4, 4] {
+                {Math.Cos(-fi),0,-Math.Sin(-fi),0},
+                {0,1,0,0},
+                {Math.Sin(-fi),0,Math.Cos(-fi),0},
+                {0,0,0,1} };
+            }
+            else if (radioButton3.Checked)
+            {
+                T = new double[4, 4] {
+                {Math.Cos(-fi),Math.Sin(-fi),0,0},
+                {-Math.Sin(-fi),Math.Cos(-fi),0,0},
+                {0,0,1,0},
+                {0,0,0,1} };
+            }
             Transformation();
             Projection_Transformation();
             Invalidate();
@@ -387,10 +394,10 @@ namespace lab10
                         {1,0,0,0},
                         {0,1,0,0},
                         {0.5*Math.Cos(Math.PI/180*30), Math.Sin(Math.PI/180*30),0,0},
-                        {0,0,0,1} 
+                        {0,0,0,1}
                     };
                     break;
-            
+
                 case 2:
                     P = new double[4, 4] {
                         {1,0,0,0},
@@ -404,7 +411,7 @@ namespace lab10
             Projection_Transformation();
             Invalidate();
         }
+
+      
     }
-
-
 }
