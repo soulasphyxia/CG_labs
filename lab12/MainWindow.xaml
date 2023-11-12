@@ -1,0 +1,377 @@
+﻿<Window x:Class="lab12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab12"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="920" Width="1280" Loaded="Window_Loaded_1">
+    <Window.Background>
+        <ImageBrush ImageSource="/2k_stars_milky_way.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Viewport3D x:Name="Viewport3D" Margin="-33,4,33,-4">
+            <Viewport3D.Camera>
+                <PerspectiveCamera Position="0.5,27.5,45.5" LookDirection="0,-0.6,-1.5" FieldOfView="100"  />
+
+            </Viewport3D.Camera>
+            <Viewport3D.Children>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-2" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D x:Name="Solar">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+                                                           0,0,1 1,0,1 0,1,1 1,1,1"
+                                                TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                                                                 0,1,4 1,5,4 1,7,5 1,3,7
+                                                                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                                                "0,0 0,1 0,1 1,1
+                                                                 1,1 0,1 1,0 0,0
+                                                                 0,0 1,0 0,1 1,1
+                                                                 1,1 0,1 1,0 0,0
+                                                                 1,1 0,1 1,0 0,1"/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_sun.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetZ="-8.5"/>
+                                    <ScaleTransform3D ScaleX="7" ScaleY="7" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D x:Name="Mercury">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+                                                           0,0,1 1,0,1 0,1,1 1,1,1"
+                                                TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                                                                 0,1,4 1,5,4 1,7,5 1,3,7
+                                                                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates ="0,0 0,1 0,1 1,1
+                                                                    1,1 0,1 1,0 0,0
+                                                                    0,0 1,0 0,1 1,1
+                                                                    1,1 0,1 1,0 0,0
+                                                                    1,1 0,1 1,0 0,1
+                                        "/>     
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_mercury.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="3" OffsetX="3.5"  OffsetZ="-4"/>
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D x:Name="Venus">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+                                                           0,0,1 1,0,1 0,1,1 1,1,1"
+                                                TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                                                                 0,1,4 1,5,4 1,7,5 1,3,7
+                                                                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_venus_surface.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D  OffsetY ="2" OffsetX="2"  OffsetZ="-0.5"/>
+                                    <ScaleTransform3D ScaleX="1.5" ScaleY="1.5" ScaleZ="1.5" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D x:Name="Earth">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+           0,0,1 1,0,1 0,1,1 1,1,1"
+TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                 0,1,4 1,5,4 1,7,5 1,3,7
+                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_earth_daymap.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="2" OffsetX="-2.5"  OffsetZ="1.8"/>
+                                    <ScaleTransform3D ScaleX="1.6" ScaleY="1.6" ScaleZ="1.6" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <ModelVisual3D x:Name="Mars">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+                           0,0,1 1,0,1 0,1,1 1,1,1"
+                TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                                 0,1,4 1,5,4 1,7,5 1,3,7
+                                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_mars.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="2" OffsetX="6"  OffsetZ="8"/>
+                                    <ScaleTransform3D ScaleX="1.2" ScaleY="1.2" ScaleZ="1.2" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <ModelVisual3D x:Name="Jupiter">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+           0,0,1 1,0,1 0,1,1 1,1,1"
+TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                 0,1,4 1,5,4 1,7,5 1,3,7
+                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_jupiter.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="2" OffsetX="-3.5"  OffsetZ="3.9"/>
+                                    <ScaleTransform3D ScaleX="2.6" ScaleY="2.6" ScaleZ="2.6" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D x:Name="Saturn">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+           0,0,1 1,0,1 0,1,1 1,1,1"
+TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                 0,1,4 1,5,4 1,7,5 1,3,7
+                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_saturn.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="2" OffsetX="-2.5"  OffsetZ="7.3"/>
+                                    <ScaleTransform3D ScaleX="1.8" ScaleY="1.8" ScaleZ="1.8" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <ModelVisual3D x:Name="Uranus">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+           0,0,1 1,0,1 0,1,1 1,1,1"
+TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                 0,1,4 1,5,4 1,7,5 1,3,7
+                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_uranus.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="2" OffsetX="1.5"  OffsetZ="-20"/>
+                                    <ScaleTransform3D ScaleX="1.65" ScaleY="1.65" ScaleZ="1.65" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <ModelVisual3D x:Name="Neptune">
+                    <ModelVisual3D.Content>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="0,0,0 1,0,0 0,1,0 1,1,0 
+                                                           0,0,1 1,0,1 0,1,1 1,1,1"
+                                                TriangleIndices="0,2,1 1,2,3 0,4,2 2,4,6 
+                                                                 0,1,4 1,5,4 1,7,5 1,3,7
+                                                                 4,5,6 7,6,5 2,6,3 3,6,7"
+                                                TextureCoordinates=
+                                    "0,0 0,1 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    0,0 1,0 0,1 1,1
+                                    1,1 0,1 1,0 0,0
+                                    1,1 0,1 1,0 0,1
+                                    "/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource ="2k_neptune.jpg"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetY="2" OffsetX="-1.5"  OffsetZ="-30"/>
+                                    <ScaleTransform3D ScaleX="1.4" ScaleY="1.4" ScaleZ="1.4" />
+                                </Transform3DGroup>
+                            </GeometryModel3D.Transform>
+                        </GeometryModel3D>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight Color="#FFFFFF" Direction="-1,-1,-1" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+            </Viewport3D.Children>
+            
+
+        </Viewport3D>
+    </Grid>
+   
+</Window>
